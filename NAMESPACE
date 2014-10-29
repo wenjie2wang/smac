@@ -1,0 +1,8 @@
+useDynLib(smac)
+
+export(smac)
+export(cvsmac)
+
+
+S3method(predict, smac)
+S3method(predict, cvsmac)
