@@ -63,7 +63,7 @@ tempbeta0 = as.vector(tempbeta0 - t(as.matrix(center/scale))%*%tempbeta)
 tempbeta = tempbeta/scale
 }
 
-if (class(tempbeta)=="numeric") {tempbeta=(as.matrix(tempbeta))}
+if (inherits(tempbeta, "numeric")) {tempbeta=(as.matrix(tempbeta))}
 
 rownames(tempbeta)=x.name
 
@@ -103,7 +103,7 @@ tempbeta0 = as.vector(tempbeta0 - t(as.matrix(center/scale))%*%tempbeta)
 tempbeta = tempbeta/scale
 }
 
-if (class(tempbeta)=="numeric") {tempbeta=(as.matrix(tempbeta))}
+if (inherits(tempbeta, "numeric")) {tempbeta=(as.matrix(tempbeta))}
 
 rownames(tempbeta)=x.name
 

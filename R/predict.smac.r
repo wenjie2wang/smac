@@ -5,7 +5,7 @@ if (is.null(new.x)) {new.x=object$x}
 
 if (is.null(lambda)) {lambda=object$lambda}
 
-if (class(new.x)!="matrix") {new.x = as.matrix(new.x)}
+if (! inherits(new.x, "matrix")) {new.x = as.matrix(new.x)}
 if (ncol(new.x)!=ncol(object$x)) {stop("The new covariates matrix/data.frame has a wrong dimension.")}
 if (!is.numeric(lambda)) {stop("All lambda should be numeric.")}
 if (any(lambda < 0)) {stop("All lambda should be non-negative.")}
