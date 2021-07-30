@@ -2,7 +2,6 @@ useDynLib(smac)
 
 export(smac)
 export(cvsmac)
-
-
+importFrom("stats", "predict")
 S3method(predict, smac)
 S3method(predict, cvsmac)
